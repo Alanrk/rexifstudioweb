@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /en/
+Allow: /zh-cn/
+Allow: /zh-tw/
+Allow: /ja/
+Disallow: /
+
+Sitemap: https://www.rexifstudio.com/sitemap.xml
+
