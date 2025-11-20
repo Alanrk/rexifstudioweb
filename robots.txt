@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.ainewtab.app/sitemap.xml

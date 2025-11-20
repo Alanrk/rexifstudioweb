@@ -1,740 +1,564 @@
 <!DOCTYPE html>
 <html lang="en" class="astro-BLV3VKFF">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="../favicon.png">
+        <meta name="generator" content="Astro v1.9.2">
+        <meta name="description" content="Rexif Studio is an EXIF editor for camera RAW files. Update RAW metadata to match Adobe Camera Raw / Lightroom camera profiles and unlock any camera’s color style. Supports macOS and Windows.">
+        <meta name="keywords" content="Rexif Studio, EXIF editor, RAW metadata editor, camera RAW workflow, Adobe Camera Raw compatibility, Lightroom camera profiles, camera color styles, RAW processing tools">
+        <meta name="msvalidate.01" content="95F687B6489089359B18DE496FD5F23B" />
+        <meta name="baidu-site-verification" content="codeva-D9jHMnyxP5" />
+        <title>Rexif Studio - Camera RAW EXIF Editor</title>
+        <link as="font" crossorigin rel="preload" href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4fFg.ttf" type="font/ttf"><link as="font" crossorigin rel="preload" href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4fFg.ttf" type="font/ttf"><link as="font" crossorigin rel="preload" href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDFRkfFg.ttf" type="font/ttf"><link as="font" crossorigin rel="preload" href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDLBkfFg.ttf" type="font/ttf">
+<style>@font-face {font-weight: 400;font-style: normal;font-family: Urbanist;font-display: swap;src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4fFg.ttf)}</style><style>@font-face {font-weight: 500;font-style: normal;font-family: Urbanist;font-display: swap;src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4fFg.ttf)}</style><style>@font-face {font-weight: 600;font-style: normal;font-family: Urbanist;font-display: swap;src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDFRkfFg.ttf)}</style><style>@font-face {font-weight: 700;font-style: normal;font-family: Urbanist;font-display: swap;src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDLBkfFg.ttf)}</style>
+<style>html { font-family: Urbanist, _font_fallback_1723703610780, sans-serif; } @font-face { font-family: _font_fallback_1723703610780; size-adjust: 100.98%; src: local('Arial'); ascent-override: 94.08%; descent-override: 24.76%; line-gap-override: 0.00%; }</style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="https://www.ainewtab.app/favicon.png">
-    <meta name="generator" content="Astro v1.9.2">
-    <meta name="description"
-        content="Transform your Chrome new tab with TabMark. Set bookmarks as new tab page, use AI search, and enhance your browsing with smart features.">
-    <meta name="keywords"
-        content="TabMark,wow addons,addons, extension chrome browser, google extension, chrome extension, google chrome extensions, my favorites, bookmarks chrome, bookmarks chrome, homepage in google, google chrome, new tab, open bookmarks, bookmarks chrome,open bookmarks in new tab, custom bookmarks, custom new tab, start page, tab extension, new tab page, design, aesthetics, bookmark management, bookmark homepage, favorites bar management, browser homepage, browser design customization, ai search">
-    <meta name="msvalidate.01" content="95F687B6489089359B18DE496FD5F23B" />
-    <meta name="baidu-site-verification" content="codeva-D9jHMnyxP5" />
-    <title>TabMark New Tab - Make Bookmark Management and AI Search More Efficient</title>
-    <link as="font" crossorigin rel="preload"
-        href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4fFg.ttf" type="font/ttf">
-    <link as="font" crossorigin rel="preload"
-        href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4fFg.ttf" type="font/ttf">
-    <link as="font" crossorigin rel="preload"
-        href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDFRkfFg.ttf" type="font/ttf">
-    <link as="font" crossorigin rel="preload"
-        href="https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDLBkfFg.ttf" type="font/ttf">
-    <style>
-        @font-face {
-            font-weight: 400;
-            font-style: normal;
-            font-family: Urbanist;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4fFg.ttf)
-        }
-    </style>
-    <style>
-        @font-face {
-            font-weight: 500;
-            font-style: normal;
-            font-family: Urbanist;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4fFg.ttf)
-        }
-    </style>
-    <style>
-        @font-face {
-            font-weight: 600;
-            font-style: normal;
-            font-family: Urbanist;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDFRkfFg.ttf)
-        }
-    </style>
-    <style>
-        @font-face {
-            font-weight: 700;
-            font-style: normal;
-            font-family: Urbanist;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDLBkfFg.ttf)
-        }
-    </style>
-    <style>
-        html {
-            font-family: Urbanist, _font_fallback_1723703610780, sans-serif;
-        }
+        <link rel="stylesheet" href="../assets/5bb06fcb.css"/>
+<script type="module">let e=!1;const s=document.querySelector("#navlinks"),l=document.querySelector("#hamburger"),t=document.querySelector("#navLayer"),i=[...s.querySelector("ul").children];function a(){e?(s.classList.add("!visible","!scale-100","!opacity-100","!lg:translate-y-0"),l.classList.add("toggled"),t.classList.add("origin-top","scale-y-100")):(s.classList.remove("!visible","!scale-100","!opacity-100","!lg:translate-y-0"),l.classList.remove("toggled"),t.classList.remove("origin-top","scale-y-100"))}l.addEventListener("click",()=>{e=!e,a()});i.forEach(c=>{c.addEventListener("click",()=>{e=!e,a()})});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-21ZMLLTMMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
-        @font-face {
-            font-family: _font_fallback_1723703610780;
-            size-adjust: 100.98%;
-            src: local('Arial');
-            ascent-override: 94.08%;
-            descent-override: 24.76%;
-            line-gap-override: 0.00%;
-        }
-    </style>
-
-    <link rel="stylesheet" href="https://www.ainewtab.app/assets/5bb06fcb.css" />
-    <script type="module">let e = !1; const s = document.querySelector("#navlinks"), l = document.querySelector("#hamburger"), t = document.querySelector("#navLayer"), i = [...s.querySelector("ul").children]; function a() { e ? (s.classList.add("!visible", "!scale-100", "!opacity-100", "!lg:translate-y-0"), l.classList.add("toggled"), t.classList.add("origin-top", "scale-y-100")) : (s.classList.remove("!visible", "!scale-100", "!opacity-100", "!lg:translate-y-0"), l.classList.remove("toggled"), t.classList.remove("origin-top", "scale-y-100")) } l.addEventListener("click", () => { e = !e, a() }); i.forEach(c => { c.addEventListener("click", () => { e = !e, a() }) });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21ZMLLTMMH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-21ZMLLTMMH');
-    </script>
-
-    <!-- Add Schema.org data for software application -->
-    <script type="application/ld+json">
+  gtag('config', 'G-21ZMLLTMMH');
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"Rexif Studio is an EXIF editor for camera RAW files. It updates RAW metadata to match Adobe Camera Raw and Lightroom camera profiles so you can unlock any camera's color style. Supports macOS and Windows.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
+<!-- Head metadata -->
+<meta name="robots" content="index, follow">
+<!-- Open Graph tags -->
+<meta property="og:title" content="Rexif Studio - Camera RAW EXIF Editor">
+<meta property="og:description" content="Rexif Studio updates RAW metadata to match Adobe Camera Raw / Lightroom camera profiles so you can replicate any camera’s color style. Supports macOS and Windows.">
+<meta property="og:image" content="https://www.rexifstudio.com/screenshot-en.png">
+<meta property="og:url" content="https://www.rexifstudio.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:author" content="sowhale.me">
+<!-- Twitter Card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rexif Studio - Camera RAW EXIF Editor">
+<meta name="twitter:description" content="Rexif Studio updates RAW metadata to match Adobe Camera Raw / Lightroom camera profiles so you can replicate any camera’s color style. Supports macOS and Windows.">
+<meta name="twitter:image" content="https://www.rexifstudio.com/screenshot-en.png">
+<meta name="twitter:author" content="sowhale.me">
+<!-- Canonical & alternate -->
+<link rel="canonical" href="https://www.rexifstudio.com/en/" />
+<link rel="alternate" hreflang="en" href="https://www.rexifstudio.com/en/" />
+<link rel="alternate" hreflang="zh-CN" href="https://www.rexifstudio.com/zh-cn/" />
+<link rel="alternate" hreflang="zh-TW" href="https://www.rexifstudio.com/zh-tw/" />
+<link rel="alternate" hreflang="ja" href="https://www.rexifstudio.com/ja/" />
+<link rel="alternate" hreflang="x-default" href="https://www.rexifstudio.com/en/" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "TabMark",
-        "applicationCategory": "BrowserExtension",
-        "description": "A Chrome new tab extension that transforms your bookmarks into new tab page, featuring AI smart search.",
-        "operatingSystem": ["Chrome OS","Windows","macOS","Linux"],
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "softwareVersion": "1.243",
-        "url": "https://www.ainewtab.app",
-        "downloadUrl": "https://chromewebstore.google.com/detail/tabmark-bookmark-new-tab/jpejneelbjckppjapemgfeheifljmaib",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "10"
-        }
-    }
-    </script>
-
-    <!-- Add SEO meta tags -->
-    <meta name="robots" content="index, follow">
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="TabMark New Tab - Make Bookmark Management and AI Search More Efficient">
-    <meta property="og:description" content="TabMark transforms your bookmarks into new tab page, featuring AI smart search to make your browsing more efficient.">
-    <meta property="og:image" content="https://www.ainewtab.app/screenshot.png">
-    <meta property="og:url" content="https://www.ainewtab.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:author" content="sowhale.me">
-
-    <!-- Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TabMark New Tab - Make Bookmark Management and AI Search More Efficient">
-    <meta name="twitter:description" content="TabMark transforms your bookmarks into new tab page, featuring AI smart search to make your browsing more efficient.">
-    <meta name="twitter:image" content="https://www.ainewtab.app/screenshot.png">
-    <meta name="twitter:author" content="sowhale.me">
-
-    <!-- Add canonical and alternate language links -->
-    <link rel="canonical" href="https://www.ainewtab.app/en/" />
-    <link rel="alternate" hreflang="en" href="https://www.ainewtab.app/en/" />
-    <link rel="alternate" hreflang="zh-CN" href="https://www.ainewtab.app/zh-cn/" />
-    <link rel="alternate" hreflang="zh-TW" href="https://www.ainewtab.app/zh-tw/" />
-    <link rel="alternate" hreflang="ja" href="https://www.ainewtab.app/ja/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.ainewtab.app/en/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-
-    <!-- Add FAQ Schema -->
-    <script type="application/ld+json">
+      "@type": "Question",
+      "name": "What is camera profile matching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Camera profile matching is the core feature of Rexif Studio. By updating the camera brand and model fields in RAW EXIF metadata, Adobe Camera Raw and Lightroom can apply the target camera\u2019s color profile so you get its in-camera look."
+      }
+    },
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How to set bookmarks as new tab page?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Select a folder in the TabMark sidebar or folder card, right-click and choose 'Set as Homepage' from the context menu. You can arrange bookmarks by dragging and dropping, and manage bookmark folders through the sidebar tree view."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How to use AI search features?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Use AI search directly in new tabs, with support for Doubao, Kimi, Metaso, Felo, ChatGPT and other AI search engines, as well as traditional search engines like Google and Bing. You can freely arrange the search engines to match your preferences."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How to use comparison search?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Enter search terms in the new tab search box and use Cmd/Ctrl + Enter to search all engines at once. On any webpage, select text and click the sidebar search icon or use shortcuts (Alt + 1-6) to search in corresponding engines, making it easy to compare different results."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How to manage bookmark groups?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Through the sidebar's tree view, you can easily manage your bookmark folder structure. Support for expanding/collapsing folders helps you quickly locate and access the bookmarks you need."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How to customize search engines?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You can adjust the order of search engines by dragging and dropping, placing frequently used search engines in more accessible positions. Supports various types including AI search, traditional search, and social media search."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How to browse bookmarks in browser sidebar?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Press Alt/Command + B on any webpage to open the browser sidebar for quick access to bookmarks and search features. In the sidebar, you can view and manage all bookmarks in a tree structure, with support for expanding/collapsing folders, drag-and-drop sorting, and quick search. The sidebar allows you to access bookmarks from any page without opening a new tab."
-                }
-            }
-        ]
+      "@type": "Question",
+      "name": "How do I edit EXIF metadata with Rexif Studio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select the RAW files you want to process and choose the target camera model. Rexif Studio updates the EXIF camera identification fields while keeping all shooting parameters intact. The adjusted files load the target profile automatically in Adobe Camera Raw and Lightroom."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which RAW formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rexif Studio supports major RAW formats including CR2/CR3 (Canon), ARW (Sony), NEF (Nikon), RAF (Fujifilm), ORF (Olympus), RW2 (Panasonic), PEF (Pentax), SRW (Samsung), and DNG. The software edits EXIF metadata directly for these formats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Rexif Studio compatible with Adobe Camera Raw and Lightroom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Rexif Studio is designed for Adobe Camera Raw and Lightroom compatibility. The metadata updates ensure both applications recognize the target camera profile and apply the correct color look."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which platforms does Rexif Studio support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rexif Studio is built with Flutter and supports macOS and Windows. It integrates with Adobe DNG Converter and ExifTool, which should be installed separately to access the full workflow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do photographers need camera profile matching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Photographers can reproduce the color style of any camera across their entire workflow. Camera profile matching keeps multi-camera shoots consistent, reduces color grading time, and makes it easier to achieve a specific look."
+      }
     }
-    </script>
-    <script>
-        function detectBrowserAndRedirect() {
-            const isEdge = navigator.userAgent.indexOf("Edg") != -1;
-            const chromeStoreUrl = "https://chromewebstore.google.com/detail/tabmark-bookmark-new-tab/jpejneelbjckppjapemgfeheifljmaib";
-            const edgeStoreUrl = "https://microsoftedge.microsoft.com/addons/detail/tabmarkbookmark-new-tab/gbndiacllfljcmojlfgookcdjkbcigmg";
+  ]
+}
+</script>
+<script>
+  // Detect operating system (Mac and Windows only)
+  function detectOS() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const platform = navigator.platform.toLowerCase();
+    
+    if (userAgent.includes('mac') || platform.includes('mac')) {
+      return 'mac';
+    } else if (userAgent.includes('win') || platform.includes('win')) {
+      return 'windows';
+    } else {
+      return 'unsupported';
+    }
+  }
 
-            if (isEdge) {
-                window.open(edgeStoreUrl, '_blank');
-            } else {
-                window.open(chromeStoreUrl, '_blank');
-            }
-        }
+  // Update download button based on OS
+  function updateDownloadButton() {
+    const os = detectOS();
+    const downloadButton = document.querySelector('a[href*="pan.baidu.com"]');
+    const buttonText = document.getElementById('browser-button-text');
+    
+    if (downloadButton && buttonText) {
+      if (os === 'mac') {
+        buttonText.textContent = "Download App";
+        downloadButton.title = "Download Rexif Studio for macOS";
+      } else if (os === 'windows') {
+        buttonText.textContent = "Download App";
+        downloadButton.title = "Download Rexif Studio for Windows";
+      } else {
+        buttonText.textContent = "Mac and Windows Only";
+        downloadButton.title = "Rexif Studio currently supports macOS and Windows";
+        downloadButton.style.opacity = "0.6";
+        downloadButton.style.cursor = "not-allowed";
+        downloadButton.onclick = function(e) {
+          e.preventDefault();
+          alert('Sorry, Rexif Studio currently supports macOS and Windows only.');
+        };
+      }
+    }
+  }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const buttonText = document.getElementById('browser-button-text');
-            const isEdge = navigator.userAgent.indexOf("Edg") != -1;
-            buttonText.textContent = isEdge ? "Add to Edge" : "Add to Chrome";
-        });
-    </script>
-
+  // Update button text once the page loads
+  document.addEventListener('DOMContentLoaded', function () {
+    updateDownloadButton();
+  });
+</script>
 </head>
+    <body class="bg-white dark:bg-gray-900 astro-BLV3VKFF">
+        
 
-<body class="bg-white dark:bg-gray-900 astro-BLV3VKFF">
-
-
-    <header class="astro-HAP4XUPI">
-        <nav
-            class="absolute z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent astro-HAP4XUPI">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-                <div
-                    class="relative flex flex-wrap items-center justify-between gap-6 py-8 md:gap-0 md:py-8 astro-HAP4XUPI">
-                    <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max astro-HAP4XUPI">
-                        <a href="/#home" aria-label="logo" class="flex items-center space-x-2 astro-HAP4XUPI">
-                            <div aria-hidden="true" class="flex space-x-1 astro-HAP4XUPI">
-                                <img src="https://www.ainewtab.app/icon-128.png" alt="Logo" class="h-6 w-6 astro-HAP4XUPI">
-                            </div>
-
-                            <span class="text-2xl font-bold text-gray-900 dark:text-white astro-HAP4XUPI">TabMark</span>
-                        </a>
-
-                        <div class="relative flex max-h-10 items-center lg:hidden astro-HAP4XUPI">
-                            <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 astro-HAP4XUPI">
-                                <div aria-hidden="true" id="line"
-                                    class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300 astro-HAP4XUPI">
-                                </div>
-                                <div aria-hidden="true" id="line2"
-                                    class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300 astro-HAP4XUPI">
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="navLayer" aria-hidden="true"
-                        class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-gray-900/70 lg:hidden astro-HAP4XUPI">
-                    </div>
-                    <div id="navlinks"
-                        class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none astro-HAP4XUPI">
-                        <div class="w-full text-gray-600 dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0 astro-HAP4XUPI">
-                            <ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm astro-HAP4XUPI">
-                                <li class="astro-HAP4XUPI">
-                                    <a href="#features" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
-                                        <span class="astro-HAP4XUPI">Features</span>
-                                    </a>
-                                </li>
-                                <li class="astro-HAP4XUPI">
-                                    <a href="https://cooing-loganberry-b74.notion.site/TabMark-Bookmark-New-Tab-7a083a74f84e4bb48345e389c1e53717?pvs=74" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
-                                        <span class="astro-HAP4XUPI">Blog</span>
-                                    </a>
-                                </li>
-                                <li class="astro-HAP4XUPI">
-                                    <a href="https://cooing-loganberry-b74.notion.site/TabMark-Support-14d1ee1c3b3a8063a82ef1b1bfc2e11e" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
-                                        <span class="astro-HAP4XUPI">Support</span>
-                                    </a>
-                                </li>
-                                <li class="astro-HAP4XUPI">
-                                    <a href="https://cooing-loganberry-b74.notion.site/TabMark-Bookmark-New-Tab-Product-Suggestions-14d1ee1c3b3a8063a82ef1b1bfc2e11e" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
-                                        <span class="astro-HAP4XUPI">Feedback</span>
-                                    </a>
-                                </li>
-
-                                <li class="astro-HAP4XUPI">
-                                    <a href="https://www.ainewtab.app/LazyCat-Bookmark-Cleaner/en/" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
-                                        <span class="astro-HAP4XUPI">LazyCat Bookmark Cleaner</span>
-                                    </a>
-                                </li>
-                                <li class="astro-HAP4XUPI relative">
-                                    <div class="relative">
-                                        <select onchange="window.location.href=this.value"
-                                            class="appearance-none bg-transparent font-semibold text-gray-700 dark:text-white cursor-pointer pr-8 pl-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20">
-                                            <option value="https://www.ainewtab.app/en/" selected>English</option>
-                                            <option value="https://www.ainewtab.app/zh-cn/">简体中文</option>
-                                            <option value="https://www.ainewtab.app/zh-tw/">繁體中文</option>
-                                            <option value="https://www.ainewtab.app/ja/">日本語</option>
-                                        </select>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                                            <svg class="h-4 w-4 fill-current text-gray-700 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <main class="space-y-24 mb-1">
-        <div class="relative" id="home">
-            <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-                <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-emerald-400 dark:from-emerald-600">
-                </div>
-                <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-            </div>
-            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-                <div class="relative pt-36 ml-auto">
-                    <div class="lg:w-2/3 text-center mx-auto">
-                        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
-                            Your <span class="text-primary dark:text-white">Bookmarks</span> , deserve to be <span class="text-primary dark:text-white">Rediscovered</span>
-                        </h1>
-                        <p class="mt-8 text-gray-700 dark:text-gray-300">
-                            TabMark turns your bookmarks into a new tab page, making your saved bookmarks clear, tidy, and efficient, allowing you to quickly reach the websites and resources you need most. Paired with intelligent AI search, find the answers you want faster. Supports Chrome and Edge.
-                        </p>
-                        <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                            <button onclick="detectBrowserAndRedirect()"
-                                class="relative flex items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
-                                style="transform: translateZ(0); width: 180px; height: 50px;">
-                                <span id="browser-button-text" class="relative text-base font-semibold text-white">Add to </span>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="https://www.ainewtab.app/screenshot1.png" alt="TabMark new tab screenshot" class="mt-16 mx-auto shadow-xl" style="width: 100%; max-width: 1232px; aspect-ratio: 1232/804; height: auto; object-fit: contain;" >
-                </div>
-            </div>
-        </div>
-        <div id="features">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-                <div class="md:w-2/3 lg:w-1/2 mx-auto text-center">
-                    <div class="flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6 text-secondary">
-                            <path fill-rule="evenodd"
-                                d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-
-                    <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
-                    What can I do for you?
-                    </h2>
-                </div>
-                <div
-                    class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
-                    <div
-                        class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                        <div class="relative space-y-8 py-12 p-8">
-                            <span class="w-12 text-5xl inline-block">
-                                🏠
-                            </span>
-
-
-                            <div class="space-y-2">
-                                <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                    Set Bookmarks as New Tab
-                                </h5>
-                                <p class="text-gray-600 dark:text-gray-300">
-                                    After installation, choose your frequently used bookmark folder. Simply right-click and select "Set as Homepage" to quickly access selected bookmarks in new tabs.<br><br>
-                                    Supports bookmark drag-and-drop sorting for personalized management. The sidebar's tree view provides intuitive folder management for quick content access.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                        <div class="relative space-y-8 py-12 p-8">
-                            <span class="w-12 text-5xl inline-block">
-                                🔍
-                            </span>
-                            <div class="space-y-2">
-                                <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                    AI Smart Search
-                                </h5>
-                                <p class="text-gray-600 dark:text-gray-300">
-                                    Use AI search directly in new tabs, with quick access to Doubao, Kimi, Metaso, Felo, ChatGPT, and more. Also supports traditional search engines like Google and Bing. Arrange them freely to match your preferences.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                        <div class="relative space-y-8 py-12 p-8">
-                            <span class="w-12 text-5xl inline-block">
-                                🆚
-                            </span>
-
-                            <div class="space-y-2">
-                                <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                    One-Click Compare Search
-                                </h5>
-                                <p class="text-gray-600 dark:text-gray-300">
-                                    Press Cmd/Ctrl + Enter to instantly search across all search engines, compare different results, and find the best
-                                    answer.
-                                    <br><br>
-                                    After selecting text, quickly launch searches through the sidebar or shortcuts (Alt + 1-7 for specific engines, Cmd/Ctrl
-                                    + Enter for all engines).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                        <div class="relative space-y-8 py-12 p-8">
-                            <span class="w-12 text-5xl inline-block">
-                                ☀️
-                            </span>
-
-                            <div class="space-y-2">
-                                <h5
-                                    class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                    Customize Your New Tab
-                                </h5>
-                                <p class="text-gray-600 dark:text-gray-300">
-                                    Supports dark mode and wallpaper customization: Choose from 10 curated preset wallpapers or upload your own to personalize your
-                                    new tab page.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden py-8 mt-16 border-b border-gray-100 dark:border-gray-800 sm:flex justify-center">
-                    <div class="text-center">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Supports AI Search, Traditional Search, and Social Media Search</h6>
-                        <p class="mt-2 text-gray-500">More search options coming soon</p>
-                    </div>
-                </div>
-                <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-                    <div class="p-4  transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/google-logo.svg" class="h-8 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4  transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/bing-logo.png" class="h-8 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 flex transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/chatgpt-logo.svg" class="h-8 w-auto m-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/felo-logo.svg" class="h-8 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 flex transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/doubao-logo.png" class="h-8 w-auto m-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/kimi-logo.svg" class="h-8 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4  transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/metaso-logo.png" class="h-8 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 grayscale flex transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/perplexity-logo.svg" class="h-8 w-auto m-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 grayscale flex transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/claude-logo.svg" class="h-8 w-auto m-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/jike-logo.svg" class="h-12 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 grayscale flex transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/twitter-logo.png" class="h-8 w-auto m-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                    <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                        <img src="https://www.ainewtab.app/images/clients/xiaohongshu-logo.svg" class="h-8 w-auto mx-auto" loading="lazy"
-                            alt="client logo" width="" height="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="testimonials">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-                <div class="md:w-2/3 lg:w-1/2 mx-auto text-center">
-                    <div class="flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
-                            <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
-                        User Reviews
-                    </h2>
-                </div>
-                
-                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-16">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-item">
-                        <img src="https://www.ainewtab.app/images/avatars/avatars-1.jpg" alt="User Avatar" class="user-avatar">
-                        <div class="rating">
-                            ★★★★★
-                        </div>
-                        <div class="user-name">Chicagoake</div>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            "It largely replaces various Arc features! Now that Arc has been abandoned, it's time to return to Chrome!"
-                        </p>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-item">
-                        <img src="https://www.ainewtab.app/images/avatars/avatars-2.jpg" alt="User Avatar" class="user-avatar">
-                        <div class="rating">
-                            ★★★★★
-                        </div>
-                        <div class="user-name">Li**</div>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            "TabMark perfectly meets my needs, using bookmarks as new tab pages, with one-click search and automatic grouping - it's really useful!"
-                        </p>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-item">
-                        <img src="https://www.ainewtab.app/images/avatars/avatars-3.jpg" alt="User Avatar" class="user-avatar">
-                        <div class="rating">
-                            ★★★★★
-                        </div>
-                        <div class="user-name">Yoann</div>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            "I see some bookmark/sidebar design elements from Vivaldi and Arc 🤔 Haven't seen anything this interesting in a long time!"
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="relative py-16" id="faq">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-                <div class="md:w-2/3 lg:w-1/2 mx-auto text-center mb-16">
-                    <div class="flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
-                            <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    
-                    <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
-                        Frequently Asked Questions
-                    </h2>
-                </div>
-                
-                <div class="max-w-3xl mx-auto space-y-4">
-                    <!-- FAQ Items -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                How to set bookmarks as new tab page?
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Select a folder in the TabMark sidebar or folder card, right-click and choose "Set as Homepage" from the context menu. You can arrange bookmarks by dragging and dropping, and manage bookmark folders through the sidebar tree view.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 2 -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                How to use AI search features?
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Use AI search directly in new tabs, with support for Doubao, Kimi, Metaso, Felo, ChatGPT and other AI search engines, as well as traditional search engines like Google and Bing. You can freely arrange the search engines to match your preferences.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 3 -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                How to use comparison search?
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Enter search terms in the new tab search box and use Cmd/Ctrl + Enter to search all engines at once. On any webpage, select text and click the sidebar search icon or use shortcuts (Alt + 1-6) to search in corresponding engines, making it easy to compare different results.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 4 -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                How to manage bookmark groups?
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Through the sidebar's tree view, you can easily manage your bookmark folder structure. Support for expanding/collapsing folders helps you quickly locate and access the bookmarks you need.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 5 -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                How to customize search engines?
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                You can adjust the order of search engines by dragging and dropping, placing frequently used search engines in more accessible positions. Supports various types including AI search, traditional search, and social media search.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 6 (New) -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                How to browse bookmarks in browser sidebar?
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Press Alt/Command + B on any webpage to open the browser sidebar for quick access to bookmarks and search features. In the sidebar, you can view and manage all bookmarks in a tree structure, with support for expanding/collapsing folders, drag-and-drop sorting, and quick search. The sidebar allows you to access bookmarks from any page without opening a new tab.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <footer class="relative pt-32 pb-16 mt-16">
+<header class="astro-HAP4XUPI">
+    <nav class="absolute z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent astro-HAP4XUPI">
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-            <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
-                <!-- Product Links -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Product</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li>
-                            <a href="https://cooing-loganberry-b74.notion.site/Changelog-15b1ee1c3b3a80cb965fd3515e2d4fd2" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
-                                Changelog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://cooing-loganberry-b74.notion.site/Tabmark-Roadmap-15b1ee1c3b3a8034a6c7d68abffd6e41" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
-                                Roadmap
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="relative flex flex-wrap items-center justify-between gap-6 py-8 md:gap-0 md:py-8 astro-HAP4XUPI">
+                <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max astro-HAP4XUPI">
+                    <a href="#home" aria-label="logo" class="flex items-center space-x-2 astro-HAP4XUPI">
+                        <div aria-hidden="true" class="flex space-x-1 astro-HAP4XUPI">
+                          <img src="../images/logo.svg" alt="Logo" class="h-6 w-6 astro-HAP4XUPI">
+                        </div>
 
-                <!-- Support Links -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Support</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li>
-                            <a href="https://cooing-loganberry-b74.notion.site/Tutorial-for-Using-TabMark-Bookmark-New-Tab-14d1ee1c3b3a801684e0ffc4d44fed54?pvs=73" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
-                                Help Center
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://cooing-loganberry-b74.notion.site/TabMark-Bookmark-New-Tab-Product-Suggestions-14d1ee1c3b3a8063a82ef1b1bfc2e11e" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
-                                Feedback
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <span class="text-2xl font-bold text-gray-900 dark:text-white astro-HAP4XUPI">Rexif Studio</span>
+                    </a>
 
-                <!-- Recommended Tools -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tools</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li>
-                            <a href="https://www.ainewtab.app/LazyCat-Bookmark-Cleaner/en/" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
-                                Lazycat Bookmark Cleaner
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lifecoach-ai.net/en/" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
-                                lifecoach-ai.net
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="relative flex max-h-10 items-center lg:hidden astro-HAP4XUPI">
+                        <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 astro-HAP4XUPI">
+                            <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300 astro-HAP4XUPI"></div>
+                            <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300 astro-HAP4XUPI"></div>
+                        </button>
+                    </div>
                 </div>
+                <div id="navLayer" aria-hidden="true" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-gray-900/70 lg:hidden astro-HAP4XUPI"></div>
+                <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none astro-HAP4XUPI">
+                    <div class="w-full text-gray-600 dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0 astro-HAP4XUPI">
+                        <ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm astro-HAP4XUPI">
+                            <li class="astro-HAP4XUPI">
+                                <a href="#features" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
+                                    <span class="astro-HAP4XUPI">Feature Overview</span>
+                                </a>
+                            </li>
+                            <li class="astro-HAP4XUPI">
+                                <a href="https://cooing-loganberry-b74.notion.site/Myframe-Photo-Border-Editer-Rexif-Studio-Tabmark-Bookmark-New-Tab-LazyCat-Bookmark-Cleaner-2b11ee1c3b3a80a6ac38c7af70165427" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
+                                    <span class="astro-HAP4XUPI">Feedback</span>
+                                </a>
+                            </li>
+                            <li class="astro-HAP4XUPI">
+                                <a href="https://apps.apple.com/app/myframe-photo-border-editor/id6748721755" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 astro-HAP4XUPI">
+                                    <span class="astro-HAP4XUPI">MyFrame - Photo Border Editor</span>
+                                </a>
+                            </li>
+                            <li class="astro-HAP4XUPI relative">
+                                    <div class="relative">
+                                      <select onchange="window.location.href=this.value"
+                                        class="appearance-none bg-transparent font-semibold text-gray-700 dark:text-white cursor-pointer pr-8 pl-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20">
+                                        <option value="../zh-cn/index.html">简体中文</option>
+                                        <option value="../zh-tw/index.html">繁體中文</option>
+                                        <option value="./index.html" selected>English</option>
+                                        <option value="../ja/index.html">日本語</option>
+                                      </select>
+                                      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                        <svg class="h-4 w-4 fill-current text-gray-700 dark:text-white" xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20">
+                                          <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                        </svg>
+                                      </div>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- Social Media Links -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Connect</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li>
-                            <a href="https://twitter.com/thesowhale" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                                </svg>
-                                Twitter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Alanrk/TabMark-Bookmark-New-Tab" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                GitHub
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.sowhale.me/about/" 
-                               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                                </svg>
-                                About Author
-                            </a>
-                        </li>
-                    </ul>
+    
                 </div>
             </div>
+</div>
+    </nav>
+</header>
 
-            <div class="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800">
-                <p class="text-center text-sm text-gray-600 dark:text-gray-400">
-                    © 2024 TabMark. All rights reserved.
+
+        <main class="space-y-24 mb-1">
+		<div class="relative" id="home">
+    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-emerald-400 dark:from-emerald-600"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <div class="relative pt-36 ml-auto">
+            <div class="lg:w-2/3 text-center mx-auto">
+                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
+                    Unlock the <span class="text-primary dark:text-white">Color Style</span> of <span class="text-primary dark:text-white">Any Camera</span>
+                </h1>
+                <p class="mt-8 text-gray-700 dark:text-gray-300">
+                    Rexif Studio is an EXIF editor for camera RAW files. Update RAW metadata to match Adobe Camera Raw and Lightroom camera profiles, unlock any camera's signature look, and keep your workflow consistent. Supports macOS and Windows.
                 </p>
+                <div class="mt-16 flex justify-center">
+                            <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" target="_blank"
+                              class="relative flex items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                              style="transform: translateZ(0); width: 160px; height: 50px;">
+                              <span id="browser-button-text" class="relative text-base font-semibold text-white">Download Now</span>
+                            </a>
+                </div>
+            </div>
+            <img src="../screenshot-en.png" alt="Rexif Studio interface preview" class="mt-16 mx-auto shadow-xl" style="
+                    width: 100%; max-width: 1272px; aspect-ratio: 1272/739; height: auto; object-fit: contain;" >
+        </div>
+</div>
+</div>
+		<div id="features">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <div class="md:w-2/3 lg:w-1/2 mx-auto text-center">
+  <div class="flex justify-center items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
+      <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
+    </svg>
+  </div>
+  
+  <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
+   What can Rexif Studio do for you?
+  </h2>
+</div><div class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3">
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+            <span class="w-12 text-5xl inline-block">
+             🎨
+            </span>
+
+
+          <div class="space-y-2">
+            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+              Camera Profile Matching
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Update EXIF camera brand and model fields so Adobe Camera Raw can recognize and apply the target camera profile. Reproduce in-camera looks while keeping every original shooting parameter intact.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+            <span class="w-12 text-5xl inline-block">
+             📦
+            </span>
+          <div class="space-y-2">
+            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+              Batch Processing
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Apply the same color profile to multiple RAW files in one go. Perfect for multi-camera shoots that demand consistent color and faster post-processing.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+            <span class="w-12 text-5xl inline-block">
+             🎯
+            </span>
+
+          <div class="space-y-2">
+            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+              Adobe Camera Raw / Lightroom Compatible
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Purpose-built for Adobe Camera Raw and Lightroom. Adjusted RAW files load the target camera profile instantly, giving you the same in-camera presets and a smoother editing workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><div class="hidden py-8 mt-16 border-b border-gray-100 dark:border-gray-800 sm:flex justify-center">
+         <div class="text-center">
+              <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Supports Major RAW Formats</h6>
+              <p class="mt-2 text-gray-500">ARW, CR2, CR3, NEF, RAF, ORF, RW2, DNG, PEF, SRW, and more</p>
+        </div>
+    </div><div class="mt-12 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8">
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                    <img src="../images/camera-logos/Canon_Black.png" alt="Canon" class="h-6 w-auto object-contain dark:hidden" />
+                    <img src="../images/camera-logos/Canon_White.png" alt="Canon" class="h-6 w-auto object-contain hidden dark:block" />
+                  </div>
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                  <img src="../images/camera-logos/SONY_Black.png" alt="Sony" class="h-6 w-auto object-contain dark:hidden" />
+                  <img src="../images/camera-logos/SONY_White.png" alt="Sony" class="h-6 w-auto object-contain hidden dark:block" />
+                </div>
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                  <img src="../images/camera-logos/Nikon_Black.png" alt="Nikon" class="h-6 w-auto object-contain dark:hidden" />
+                  <img src="../images/camera-logos/Nikon_White.png" alt="Nikon" class="h-6 w-auto object-contain hidden dark:block" />
+                </div>
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                    <img src="../images/camera-logos/Fujifilm_BLack.png" alt="Fujifilm" class="h-6 w-auto object-contain dark:hidden" />
+                    <img src="../images/camera-logos/Fujifilm_White.png" alt="Fujifilm" class="h-6 w-auto object-contain hidden dark:block" />
+                  </div>
+                  <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                    <span class="text-base font-semibold text-gray-700 dark:text-white">Olympus</span>
+                  </div>
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                    <img src="../images/camera-logos/Lumix_Black.png" alt="Panasonic" class="h-6 w-auto object-contain dark:hidden" />
+                    <img src="../images/camera-logos/Lumix_White.png" alt="Panasonic" class="h-6 w-auto object-contain hidden dark:block" />
+                </div>
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                    <img src="../images/camera-logos/Ricoh_Color.svg" alt="Ricoh" class="h-6 w-auto object-contain" />
+                </div>
+                <div class="p-4 flex items-center justify-center transition duration-200 hover:grayscale-0">
+                    <img src="../images/camera-logos/Leica_Black.png" alt="Leica" class="h-6 w-auto object-contain dark:hidden" />
+                    <img src="../images/camera-logos/Leica_White.png" alt="Leica" class="h-6 w-auto object-contain hidden dark:block" />
+                </div>
+              </div>
+</div>
+</div>
+		<div class="relative py-16" id="faq">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <div class="md:w-2/3 lg:w-1/2 mx-auto text-center mb-16">
+      <div class="flex justify-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
+          <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      
+      <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
+       Frequently Asked Questions
+      </h2>
+    </div>
+    
+    <div class="max-w-3xl mx-auto space-y-4">
+      <!-- FAQ Item 1 -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            What is camera profile matching?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Camera profile matching is the core of Rexif Studio. By updating the camera brand and model in RAW EXIF metadata, Adobe Camera Raw can recognize and load the target camera profile so you get its in-camera color look instantly.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            How do I edit EXIF metadata with Rexif Studio?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Select the RAW files you need to process and choose the target camera model. Rexif Studio updates the EXIF camera identification fields. The adjusted files automatically apply the target profile inside Adobe Camera Raw and Lightroom.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Which RAW formats are supported?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Rexif Studio supports popular RAW formats including CR2/CR3 (Canon), ARW (Sony), NEF (Nikon), RAF (Fujifilm), ORF (Olympus), RW2 (Panasonic), PEF (Pentax), SRW (Samsung), and DNG. The software edits EXIF metadata for these formats directly.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Is Rexif Studio compatible with Adobe Camera Raw and Lightroom?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Yes. Rexif Studio is designed for Adobe Camera Raw and Lightroom compatibility. Updating the EXIF camera model ensures both applications recognize and apply the target camera profile without additional tweaks.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Which platforms does Rexif Studio support?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Rexif Studio is built with Flutter and supports macOS and Windows. It integrates Adobe DNG Converter and ExifTool, which should be installed separately to unlock the full workflow.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 (New) -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 faq-item">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Why do photographers need camera profile matching?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            When you want the color style of a specific camera, camera profile matching lets Adobe Camera Raw apply the correct profile automatically. You get the target in-camera look, faster editing, and consistent results across every project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+	</main>
+        <footer class="relative pt-32 pb-16 mt-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+            <!-- Product Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Product</h3>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" 
+                           target="_blank"
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            Download
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Support</h3>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="https://cooing-loganberry-b74.notion.site/Myframe-Photo-Border-Editer-Rexif-Studio-Tabmark-Bookmark-New-Tab-LazyCat-Bookmark-Cleaner-2b11ee1c3b3a80a6ac38c7af70165427" 
+                           target="_blank"
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            Report an Issue
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Resources</h3>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html" 
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            Adobe DNG Converter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://lazycatbookmarkcleaner.com" 
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            LazyCat Bookmark Cleaner
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tabmark.app" 
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            TabMark New Tab
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://apps.apple.com/app/myframe-photo-border-editor/id6748721755" 
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            MyFrame - Photo Border Editor
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Follow Us</h3>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="https://github.com/Alanrk" 
+                           target="_blank"
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/thesowhale" 
+                           target="_blank"
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                            </svg>
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.xiaohongshu.com/user/profile/66b47123000000001b039bd9" 
+                           target="_blank"
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition flex items-center gap-2">
+                            <img src="../images/clients/xiaohongshu-logo.svg" alt="Xiaohongshu" class="w-5 h-5" />
+                            Xiaohongshu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.sowhale.me/" 
+                           target="_blank"
+                           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
+                            About the Author
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
-</body>
 
-</html>
+        <div class="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800">
+            <p class="text-center text-sm text-gray-600 dark:text-gray-400">
+                © 2024 Rexif Studio. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+</body></html>
