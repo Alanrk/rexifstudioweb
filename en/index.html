@@ -26,7 +26,7 @@
 
   gtag('config', 'G-21ZMLLTMMH');
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"Rexif Studio is an EXIF editor for camera RAW files. It updates RAW metadata to match Adobe Camera Raw and Lightroom camera profiles so you can unlock any camera's color style. Supports macOS and Windows.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"Rexif Studio is an EXIF editor for camera RAW files. It updates RAW metadata to match Adobe Camera Raw and Lightroom camera profiles so you can unlock any camera's color style. Supports macOS and Windows.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
 <!-- Head metadata -->
 <meta name="robots" content="index, follow">
 <!-- Open Graph tags -->
@@ -126,27 +126,29 @@
   // Update download button based on OS
   function updateDownloadButton() {
     const os = detectOS();
-    const downloadButton = document.querySelector('a[href*="pan.baidu.com"]');
+    const downloadButtons = document.querySelectorAll('a[href*="download.rexifstudio.com"], a[href*="pan.baidu.com"]');
     const buttonText = document.getElementById('browser-button-text');
     
-    if (downloadButton && buttonText) {
+    downloadButtons.forEach(function(downloadButton) {
       if (os === 'mac') {
-        buttonText.textContent = "Download App";
+        downloadButton.href = 'https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg';
         downloadButton.title = "Download Rexif Studio for macOS";
+        if (buttonText) buttonText.textContent = "Download App";
       } else if (os === 'windows') {
-        buttonText.textContent = "Download App";
+        downloadButton.href = 'https://download.rexifstudio.com/Rxifstudio.zip';
         downloadButton.title = "Download Rexif Studio for Windows";
+        if (buttonText) buttonText.textContent = "Download App";
       } else {
-        buttonText.textContent = "Mac and Windows Only";
-        downloadButton.title = "Rexif Studio currently supports macOS and Windows";
         downloadButton.style.opacity = "0.6";
         downloadButton.style.cursor = "not-allowed";
         downloadButton.onclick = function(e) {
           e.preventDefault();
           alert('Sorry, Rexif Studio currently supports macOS and Windows only.');
         };
+        if (buttonText) buttonText.textContent = "Mac and Windows Only";
+        downloadButton.title = "Rexif Studio currently supports macOS and Windows";
       }
-    }
+    });
   }
 
   // Update button text once the page loads
@@ -243,7 +245,7 @@
                     Rexif Studio is an EXIF editor for camera RAW files. Update RAW metadata to match Adobe Camera Raw and Lightroom camera profiles, unlock any camera's signature look, and keep your workflow consistent. Supports macOS and Windows.
                 </p>
                 <div class="mt-16 flex justify-center">
-                            <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" target="_blank"
+                            <a href="https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg" target="_blank"
                               class="relative flex items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                               style="transform: translateZ(0); width: 160px; height: 50px;">
                               <span id="browser-button-text" class="relative text-base font-semibold text-white">Download Now</span>
@@ -455,7 +457,7 @@
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Product</h3>
                 <ul class="mt-4 space-y-2">
                     <li>
-                        <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" 
+                        <a href="https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg" 
                            target="_blank"
                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
                             Download

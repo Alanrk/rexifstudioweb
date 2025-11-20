@@ -26,7 +26,7 @@
 
   gtag('config', 'G-21ZMLLTMMH');
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"Rexif StudioはカメラRAWファイルのEXIF編集ツールです。RAWメタデータをAdobe Camera Raw / Lightroomのカメラプロファイルに合わせて調整し、任意のカメラの色調を再現できます。macOSとWindowsに対応。","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"Rexif StudioはカメラRAWファイルのEXIF編集ツールです。RAWメタデータをAdobe Camera Raw / Lightroomのカメラプロファイルに合わせて調整し、任意のカメラの色調を再現できます。macOSとWindowsに対応。","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
 <!-- Head metadata -->
 <meta name="robots" content="index, follow">
 <!-- Open Graph tags -->
@@ -126,27 +126,29 @@
   // OSに合わせてダウンロードボタンを更新
   function updateDownloadButton() {
     const os = detectOS();
-    const downloadButton = document.querySelector('a[href*="pan.baidu.com"]');
+    const downloadButtons = document.querySelectorAll('a[href*="download.rexifstudio.com"], a[href*="pan.baidu.com"]');
     const buttonText = document.getElementById('browser-button-text');
     
-    if (downloadButton && buttonText) {
+    downloadButtons.forEach(function(downloadButton) {
       if (os === 'mac') {
-        buttonText.textContent = "macOS版をダウンロード";
+        downloadButton.href = 'https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg';
         downloadButton.title = "Rexif Studio macOS版をダウンロード";
+        if (buttonText) buttonText.textContent = "macOS版をダウンロード";
       } else if (os === 'windows') {
-        buttonText.textContent = "Windows版をダウンロード";
+        downloadButton.href = 'https://download.rexifstudio.com/Rxifstudio.zip';
         downloadButton.title = "Rexif Studio Windows版をダウンロード";
+        if (buttonText) buttonText.textContent = "Windows版をダウンロード";
       } else {
-        buttonText.textContent = "MacとWindowsのみ対応";
-        downloadButton.title = "Rexif StudioはmacOSとWindowsのみ対応しています";
         downloadButton.style.opacity = "0.6";
         downloadButton.style.cursor = "not-allowed";
         downloadButton.onclick = function(e) {
           e.preventDefault();
           alert('申し訳ありませんが、Rexif Studioは現在macOSとWindowsのみ対応しています。');
         };
+        if (buttonText) buttonText.textContent = "MacとWindowsのみ対応";
+        downloadButton.title = "Rexif StudioはmacOSとWindowsのみ対応しています";
       }
-    }
+    });
   }
 
   // ページ読み込み時にボタン文言を設定
@@ -243,7 +245,7 @@
                     Rexif StudioはカメラRAWファイルのEXIF編集ツールです。RAWメタデータをAdobe Camera Raw / Lightroomのカメラプロファイルに合わせて調整し、目標カメラの色調をそのまま再現します。macOSとWindowsに対応。
                 </p>
                 <div class="mt-16 flex justify-center">
-                            <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" target="_blank"
+                            <a href="https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg" target="_blank"
                               class="relative flex items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                               style="transform: translateZ(0); width: 160px; height: 50px;">
                               <span id="browser-button-text" class="relative text-base font-semibold text-white">今すぐダウンロード</span>
@@ -455,7 +457,7 @@
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">製品</h3>
                 <ul class="mt-4 space-y-2">
                     <li>
-                        <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" 
+                        <a href="https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg" 
                            target="_blank"
                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
                             ダウンロード

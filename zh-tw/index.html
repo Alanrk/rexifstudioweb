@@ -26,7 +26,7 @@
 
   gtag('config', 'G-21ZMLLTMMH');
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"一款相機RAW檔案的EXIF編輯工具，透過修改RAW檔案的EXIF資訊以匹配Adobe Camera Raw / Lightroom中的相機設定檔，解鎖任意相機的色彩風格。支援macOS與Windows平台。","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rexif Studio","applicationCategory":"PhotographySoftware","operatingSystem":["Windows","macOS"],"description":"一款相機RAW檔案的EXIF編輯工具，透過修改RAW檔案的EXIF資訊以匹配Adobe Camera Raw / Lightroom中的相機設定檔，解鎖任意相機的色彩風格。支援macOS與Windows平台。","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"softwareVersion":"1.243","url":"https://www.rexifstudio.com","downloadUrl":"https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"10"}}</script>
 <!-- 在<head>中添加 -->
 <meta name="robots" content="index, follow">
 <!-- Open Graph tags -->
@@ -126,27 +126,29 @@
   // 根據作業系統更新下載按鈕
   function updateDownloadButton() {
     const os = detectOS();
-    const downloadButton = document.querySelector('a[href*="pan.baidu.com"]');
+    const downloadButtons = document.querySelectorAll('a[href*="download.rexifstudio.com"], a[href*="pan.baidu.com"]');
     const buttonText = document.getElementById('browser-button-text');
     
-    if (downloadButton && buttonText) {
+    downloadButtons.forEach(function(downloadButton) {
       if (os === 'mac') {
-        buttonText.textContent = "下載應用程式";
+        downloadButton.href = 'https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg';
         downloadButton.title = "下載 Rexif Studio macOS 版本";
+        if (buttonText) buttonText.textContent = "下載應用程式";
       } else if (os === 'windows') {
-        buttonText.textContent = "下載 Windows 版本";
+        downloadButton.href = 'https://download.rexifstudio.com/Rxifstudio.zip';
         downloadButton.title = "下載 Rexif Studio Windows 版本";
+        if (buttonText) buttonText.textContent = "下載 Windows 版本";
       } else {
-        buttonText.textContent = "僅支援 Mac 與 Windows";
-        downloadButton.title = "Rexif Studio 僅支援 macOS 與 Windows 平台";
         downloadButton.style.opacity = "0.6";
         downloadButton.style.cursor = "not-allowed";
         downloadButton.onclick = function(e) {
           e.preventDefault();
           alert('抱歉，Rexif Studio 目前僅支援 macOS 與 Windows 平台。');
         };
+        if (buttonText) buttonText.textContent = "僅支援 Mac 與 Windows";
+        downloadButton.title = "Rexif Studio 僅支援 macOS 與 Windows 平台";
       }
-    }
+    });
   }
 
   // 頁面載入時設定按鈕文字
@@ -243,7 +245,7 @@
                     Rexif Studio是一款相機RAW檔案的EXIF編輯工具，透過修改RAW檔案的EXIF資訊以匹配Adobe Camera Raw / Lightroom中的相機設定檔，解鎖任意相機的色彩風格。支援macOS與Windows平台。
                 </p>
                 <div class="mt-16 flex justify-center">
-                            <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" target="_blank"
+                            <a href="https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg" target="_blank"
                               class="relative flex items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                               style="transform: translateZ(0); width: 160px; height: 50px;">
                               <span id="browser-button-text" class="relative text-base font-semibold text-white">立即下載</span>
@@ -455,7 +457,7 @@
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">產品</h3>
                 <ul class="mt-4 space-y-2">
                     <li>
-                        <a href="https://pan.baidu.com/s/1hQftZB3juXeK9c5-jf6SMw?pwd=srac" 
+                        <a href="https://download.rexifstudio.com/ReXIF%20Studio-v1.dmg" 
                            target="_blank"
                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition">
                             下載
