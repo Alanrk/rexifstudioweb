@@ -1,9 +1,14 @@
+Sitemap: https://www.rexifstudio.com/sitemap.xml
+
 User-agent: *
 Allow: /en/
 Allow: /zh-cn/
 Allow: /zh-tw/
 Allow: /ja/
+Allow: /sitemap.xml
+Allow: /assets/
+Allow: /images/
+Allow: /favicon.png
+Allow: /BingSiteAuth.xml
 Disallow: /
-
-Sitemap: https://www.rexifstudio.com/sitemap.xml
 
